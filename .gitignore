@@ -1,3 +1,6 @@
+# Build output do Zensical
+site/
+
 # Logs
 logs
 *.log

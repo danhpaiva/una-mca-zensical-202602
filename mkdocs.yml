@@ -1,0 +1,146 @@
+site_name: "Matemática Computacional Aplicada — UNA"
+site_url: https://danhpaiva.github.io/una-mca-zensical-202602/
+site_author: danhpaiva
+
+# Link para o repositório e botão "editar esta página"
+repo_url: https://github.com/danhpaiva/una-mca-zensical-202602
+repo_name: danhpaiva/una-mca-zensical-202602
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/animaeducacao.jpg
+  favicon: assets/animaeducacao.jpg
+  font:
+    text: Inter # Fonte de texto do site
+    code: JetBrains Mono # Fonte monoespaçada dos blocos de código
+  palette:
+    # 3 estados: automático (segue o sistema) -> claro -> escuro
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Mudar para modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo automático
+  features:
+    - navigation.tabs # Seções de topo viram abas no cabeçalho
+    - navigation.indexes # Permite página-índice em cada seção
+    - navigation.sections
+    - navigation.expand # Deixa o menu lateral aberto por padrão
+    - navigation.top # Botão "Voltar ao topo" automático
+    - toc.follow # O sumário lateral acompanha a rolagem
+    - navigation.tracking # Atualiza a URL conforme o aluno rola a página
+    - content.code.copy # Botão de copiar código em um clique
+    - content.action.edit # Botão "editar esta página" (usa repo_url + edit_uri)
+    - content.tabs.link # Sincroniza abas de mesmo rótulo na página inteira
+    - navigation.instant # Navegação SPA: troca de página sem recarregar tudo
+    - navigation.instant.progress # Barra de progresso ao carregar páginas
+    - search.suggest # Sugere a continuação da palavra na busca
+    - search.highlight # Realça os termos buscados na página
+
+nav:
+  - Home: index.md
+  - Guia do Professor: setup.md
+  - 🧰 Ferramentas: ferramentas.md
+  - 📖 Aulas:
+      - "01. Conjuntos: fundamentos e operações": aulas/01-aula.md
+      - "02. Relações": aulas/02-aula.md
+      - "03. Funções": aulas/03-aula.md
+      - "04. Lógica proposicional e tabelas-verdade": aulas/04-aula.md
+      - "05. Equivalências lógicas e argumentos": aulas/05-aula.md
+      - "06. Álgebra booleana": aulas/06-aula.md
+      - "07. Circuitos digitais e aplicações": aulas/07-aula.md
+      - "08. Princípios de contagem": aulas/08-aula.md
+      - "09. Combinatória": aulas/09-aula.md
+      - "10. Matrizes": aulas/10-aula.md
+      - "11. Grafos e árvores": aulas/11-aula.md
+      - "12. Indução matemática e recorrência": aulas/12-aula.md
+  - 📝 Listas:
+      - "Lista 01 — Conjuntos": listas/01-lista.md
+      - "Lista 02 — Relações": listas/02-lista.md
+      - "Lista 03 — Funções": listas/03-lista.md
+      - "Lista 04 — Lógica proposicional": listas/04-lista.md
+      - "Lista 05 — Equivalências e argumentos": listas/05-lista.md
+      - "Lista 06 — Álgebra booleana": listas/06-lista.md
+      - "Lista 07 — Circuitos digitais": listas/07-lista.md
+      - "Lista 08 — Contagem": listas/08-lista.md
+      - "Lista 09 — Combinatória": listas/09-lista.md
+      - "Lista 10 — Matrizes": listas/10-lista.md
+      - "Lista 11 — Grafos e árvores": listas/11-lista.md
+      - "Lista 12 — Indução e recorrência": listas/12-lista.md
+  - 🗓️ Turma 2026.2:
+      - Visão geral e cronograma: turma-202602/index.md
+      - "01. Introdução e apresentação da UC": turma-202602/01-aula.md
+      - "02. Busca Ativa — Início de Semestre": turma-202602/02-aula.md
+      - "03. Fundamentos de lógica": turma-202602/03-aula.md
+      - "04. Proposições lógicas e tabela-verdade": turma-202602/04-aula.md
+      - "05. Aplicação das tabelas-verdade em exercícios": turma-202602/05-aula.md
+      - "06. Álgebra Booleana e aplicações — Parte 1": turma-202602/06-aula.md
+      - "07. Álgebra Booleana e aplicações — Parte 2": turma-202602/07-aula.md
+      - "08. Atividades/prática — Parte 1": turma-202602/08-aula.md
+      - "09. Introdução a circuitos digitais": turma-202602/09-aula.md
+      - "10. Busca Ativa — Meio de Semestre": turma-202602/10-aula.md
+      - "11. Atividades/prática — Parte 2": turma-202602/11-aula.md
+      - "12. Introdução a Grafos": turma-202602/12-aula.md
+      - "13. Atividade avaliativa em grupo": turma-202602/13-aula.md
+      - "14. Estudo de Árvore": turma-202602/14-aula.md
+      - "15. Matemática em estruturas de dados e algoritmos": turma-202602/15-aula.md
+  # - 📌 Projeto:
+  #     - Projeto Final: trabalhos/projeto-final.md
+
+# exclude_docs ainda não é suportado pelo Zensical (o conteúdo é publicado
+# mesmo assim, testado em build real) — veja
+# https://zensical.org/compatibility/configuration/
+# Caso volte a existir uma pasta de rascunhos, mantenha-a fora de docs_dir
+# (ex.: rascunhos/ na raiz do repo), pois só o que está em docs/ é publicado.
+
+# O plugin "search" não precisa mais ser declarado: a busca é embutida e
+# automática no Zensical, herdando o idioma de theme.language (confirmado
+# em build real — o search.json gerado já usa lang: ["pt-BR"]).
+# O plugin "git-revision-date-localized" ainda não é suportado pelo Zensical
+# (Tier 2, Backlog #18) — https://zensical.org/compatibility/plugins/
+# Removido do requirements.txt até haver suporte nativo.
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# Para habilitar estatísticas, crie um ID no Google Analytics e preencha abaixo:
+# extra:
+#   analytics:
+#     provider: google
+#     property: !ENV [GA_ID, "G-XXXXXXXXXX"] # Busca nas variáveis de ambiente ou usa o padrão
